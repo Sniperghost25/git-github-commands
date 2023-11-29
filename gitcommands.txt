@@ -103,3 +103,5 @@ git remote remove origin
 git remote rename origin new_origin
 
 git push origin master
+
+Push branch to github
