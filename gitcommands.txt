@@ -46,8 +46,13 @@ git merge child_branch
 
 
 Merge:
-1) Fast Forward
+1) Fast Forward Merge:
+Merging child_branch to master branch, 
+where master branch has not committed or added anything after the child branch is formed.
+Please note the content in master branch will be rewritten by the child branch if merged.
+
 2) Merge Commit (without conflicts)
+
 3) Merge commit (with conflicts)
 
 git diff       (( Changes in working directory to staging area))   ---> unstaged changes
@@ -81,4 +86,20 @@ git diff HEAD   (( Changes in working directory to HEAD))          ---> staged c
  git stash pop               ------> To restore all the recent changes from stashed contents and remove them from stash
  git stash apply             ------> To restore changes and also keep them in stash to reuse the stashed changed elsewhere
 
- 
+
+git stash list
+git stash apply stash@{2}    -------> To apply specific stash when there are multiple stashes
+git stash drop stash@{0}
+git stash clear
+
+
+
+
+git clone 
+
+git remote -v
+git remote add origin <url>
+git remote remove origin
+git remote rename origin new_origin
+
+git push origin master
