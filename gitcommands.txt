@@ -1,0 +1,84 @@
+git config --global user.name
+git config --global user.email
+
+git config user.name     To check
+git config user.email    To check
+
+git status
+git init
+
+
+git add <filename> <filename2>   They will be added to staging area from working directory befor commit is done to repository
+git status     
+git commit -m "start work on outline and main characters"
+git commit -a -m "git add and commit message"
+git status
+
+git log
+git log --oneline
+
+
+git commit --amend
+
+git branch
+git branch -v
+
+git switch 
+git switch -c <branch_name>
+git checkout
+git checkout -b <branch_name>
+
+git switch branch_other_than_delete
+git branch -d to_be_deleted_branch
+
+git switch branch_to_be_renamed
+git branch -m branch_renamed 
+
+
+$ cat  .git/HEAD
+ref: refs/heads/child_branch
+
+$ cat refs/heads/child_branch
+51f495898553700426de5669cd6d5474db9b9c43
+
+git switch master
+git merge child_branch
+
+
+Merge:
+1) Fast Forward
+2) Merge Commit (without conflicts)
+3) Merge commit (with conflicts)
+
+git diff       (( Changes in working directory to staging area))   ---> unstaged changes
+Compare staging area with working directory
+files will be compared
+chunk header (line_number,number of lines for the file)
+changes
+
+git diff HEAD   (( Changes in working directory to HEAD))          ---> staged changes
+ /dev/null  ---> If there is nothing before in the file
+
+
+ git diff --Staged  or git diff --cached (which will show staged changes like git diff HEAD)
+ git diff
+ git diff HEAD
+ git diff HEAD HEAD~1
+ git diff HEAD style/main.css
+
+ git diff branch1..branch2
+ or
+ git diff branch1 branch2
+
+ git diff commit1#..commit2#
+ or 
+ git diff commit1# commit2#
+
+
+
+
+ git stash                   ------> To stash all uncommited changes from working directory and staging area
+ git stash pop               ------> To restore all the recent changes from stashed contents and remove them from stash
+ git stash apply             ------> To restore changes and also keep them in stash to reuse the stashed changed elsewhere
+
+ 
